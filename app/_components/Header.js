@@ -54,13 +54,23 @@ export default function Header() {
           </Link>
         </nav>
         <div className="nav-actions">
-          <Link className="btn ghost" href="/profile">
+          <Link className="btn ghost nav-action-desktop" href="/profile">
             {profile.name}
           </Link>
           {hydrated && isLoggedIn && (
-            <button className="btn ghost" onClick={handleLogout} type="button">
+            <button className="btn ghost nav-action-desktop" onClick={handleLogout} type="button">
               Sign out
             </button>
+          )}
+          
+          {/* Mobile user icon button */}
+          {hydrated && isLoggedIn && (
+            <Link className="nav-action-mobile nav-user-icon" href="/profile" title={profile.name}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </Link>
           )}
         </div>
       </div>

@@ -32,7 +32,9 @@ export default function ProfilePage() {
           <p className="section-subtitle">{profile.title}</p>
           <div className="course-meta">
             <span>{profile.location}</span>
+            <div>
             <span>Member since {profile.memberSince}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -46,18 +48,11 @@ export default function ProfilePage() {
           <h3>Contact</h3>
           <ul className="list">
             <li>Email: {profile.email}</li>
-            <li>Phone: {profile.phone}</li>
+            <li>Phone: +91 75670 87542</li>
             <li>Location: {profile.location}</li>
           </ul>
         </div>
-        <div className="info-card">
-          <h3>Education</h3>
-          <ul className="list">
-            <li>{profile.education}</li>
-            <li>{profile.institution}</li>
-            <li>Member since {profile.memberSince}</li>
-          </ul>
-        </div>
+       
         <div className="info-card">
           <h3>Focus areas</h3>
           <ul className="list">
